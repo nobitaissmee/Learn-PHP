@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
 --
--- Host: localhost    Database: mvc_php
+-- Host: localhost    Database: blog
 -- ------------------------------------------------------
 -- Server version	8.0.22
 
@@ -16,7 +16,17 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Dumping routines for database 'mvc_php'
+-- Dumping data for table `posts`
+--
+
+LOCK TABLES `posts` WRITE;
+/*!40000 ALTER TABLE `posts` DISABLE KEYS */;
+INSERT INTO `posts` VALUES (2,'Something','saha','adha','2021-06-03'),(3,'Huy Ngu','Ngu Vl','Ngu deo chiu duoc','2021-06-03'),(4,'Thang ngu','Ngu vl ','Ngu oc cho','2021-06-04'),(5,'HUY OC CHO','OC CHO VL','OC CHO','2021-06-18');
+/*!40000 ALTER TABLE `posts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'blog'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -28,4 +38,4 @@
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-03 13:23:47
+-- Dump completed on 2021-06-03 14:12:43
