@@ -5,19 +5,27 @@
     } ?>"/>
     <div class="form-group">
         <label>Title</label>
-        <input type="text" name="title" value="<?php echo $post->title; ?>" class="form-control"/>
+        <input type="text" name="title" value="<?php if (!empty($post)) {
+            echo $post->title;
+        } ?>" class="form-control"/>
     </div>
     <div class="form-group">
         <label>Teaser</label>
-        <textarea name="teaser" class="form-control"><?php echo $post->teaser; ?></textarea>
+        <textarea name="teaser" class="form-control"><?php if (!empty($post)) {
+                echo $post->teaser;
+            } ?></textarea>
     </div>
     <div class="form-group">
         <label>Content</label>
-        <textarea name="content" class="form-control"><?php echo $post->content; ?></textarea>
+        <textarea name="content" class="form-control"><?php if (!empty($post)) {
+                echo $post->content;
+            } ?></textarea>
     </div>
     <div class="form-group">
         <label>Created</label>
-        <input type="date" name="created" value="<?php echo $post->created;?>" class="form-control"/>
+        <input type="date" name="created" value="<?php if (!empty($post)) {
+            echo $post->created;
+        } ?>" class="form-control"/>
     </div>
     <div class="form-group">
         <input type="submit" value="Update" class="btn btn-primary"/>
