@@ -1,5 +1,9 @@
 <?php
+require "php/model/DBConnection.php";
+require "php/model/ProductDB.php";
+require "php/model/Product.php";
 require "php/controller/ProductController.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +42,7 @@ require "php/controller/ProductController.php";
 
 </head>
 
-<body class="animsition">
+<body class="animsition" style="opacity: 1;">
 <div class="page-wrapper">
     <!-- HEADER MOBILE-->
     <?php include 'header.php';
@@ -67,7 +71,7 @@ require "php/controller/ProductController.php";
         <div class="main-content">
             <?php
             $pController = new ProductController();
-            $page= isset($_REQUEST['page'])? $_REQUEST['page'] : NULL;;
+            $page= $_REQUEST['page'] ?? NULL;;
 
             switch($page){
                 case 'create':

@@ -26,7 +26,7 @@ class ProductDB
 
     public function getAll(): array
     {
-        $sql = "select p.*, pl.name as name_productline from `products` p inner join `productlines` pl on pl.id=p.id_product";
+        $sql = "select p.*, pl.name as name_productline from `products` p inner join `productlines` pl on pl.id=p.id_productline";
         $statement = $this->conn->prepare($sql);
         $statement->execute();
         $result = $statement->fetchAll();
