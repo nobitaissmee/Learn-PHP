@@ -1,5 +1,5 @@
 <h2>Edit post</h2>
-<form method="post" action="/index.php?page=edit">
+<form method="post" action="index.php?page=edit">
     <input type="hidden" name="id" value="<?php if (!empty($post)) {
         echo $post->id;
     } ?>"/>
